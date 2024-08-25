@@ -39,7 +39,7 @@ public class CategoryService {
     public Category create(CategoryRequest categoryRequest) throws BadRequestException {
         logger.info("CategoryRequest{}", categoryRequest);
         // Create new user's account
-        Category category = new Category(categoryRequest.getName());
+        Category category = new Category(categoryRequest.getName(), categoryRequest.getParentId());
         categoryRepository.save(category);
         return categoryRepository.save(category);
     }
