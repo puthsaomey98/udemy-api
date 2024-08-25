@@ -15,8 +15,10 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  long id;
     private String name;
+    private Integer parentId;
 
-    public Category(String name) {
+    public Category(String name, Integer parentId) {
         this.name = name;
+        this.parentId = parentId;
     }
 }

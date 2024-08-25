@@ -11,5 +11,6 @@ import java.util.Set;
 public class CategoryRequest {
 
     private String name;
+    private Integer parentId;
 
 }
